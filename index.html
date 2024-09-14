@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-purpose="website">
+    <header>
+        <nav>
+            <ul>
+                <li><b><a href="#">Home</a></b></li>
+                <li><b><a href="#">About</a></b></li>
+                <li><b><a href="#">Contact</a></b></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <strong>Menu</strong>
+            <menu>
+                <details open>
+                    <summary>System Requirements</summary>
+                    <ul>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Devices</a></li>
+                        <li><a href="#">Network</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                    <details open>
+                        <summary>System Requirements</summary>
+                        <ul>
+                            <li><a href="#">Users</a></li>
+                            <li><a href="#">Devices</a></li>
+                            <li><a href="#">Network</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                        <details>
+                            <summary>System Requirements</summary>
+                            <ul>
+                                <li><a href="#">Users</a></li>
+                                <li><a href="#">Devices</a></li>
+                                <li><a href="#">Network</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </details>
+                    </details>
+                </details>
+            </menu>
+        </aside>
+        <article>
+            <nav>
+                <ul>
+                    <li><a href="#">This</a></li>
+                    <li><a href="#">Is</a></li>
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">Breadcrumb</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ol>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li>...</li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="#">Last</a></li>
+                </ol>
+            </nav>
+
+            <section>
+                <div>
+                    <dialog id="myDialog">
+                        <p>Greetings, one and all!</p>
+                        <form method="dialog">
+                            <section>
+                                <button type="submit">OK</button>
+                                <button type="reset">Cancel</button>
+                            </section>
+                        </form>
+                    </dialog>
+                </div>
+                <button
+                    onclick="document.getElementById('myDialog').showModal()">Open
+                    Dialog</button>
+            </section>
+
+            <form>
+                <section>
+                    <div>
+                        <input type="submit" id="submit" name="submit"
+                            value="Input Submit" />
+                        <input type="reset" id="reset" name="reset"
+                            value="Input Reset" />
+                        <input type="button" value="Input Button" />
+
+                        <input type="submit" id="submit" name="submit" disabled
+                            value="Input Submit" />
+                        <input type="reset" id="reset" name="reset" disabled
+                            value="Input Reset" />
+                        <input type="button" value="Input Button" disabled />
+
+                        <button>Button</button>
+                        <button type="submit">Submit button.</button>
+                        <button type="reset">Reset button.</button>
+                        <button type="button">Button.</button>
+
+                        <button disabled>Button</button>
+                        <button type="submit" disabled>Submit button.</button>
+                        <button type="reset" disabled>Reset button.</button>
+                        <button type="button" disabled>Button.</button>
+
+                        <button><q>Info Button</q></button>
+                        <button><ins>Success Button</ins></button>
+                        <button><cite>Warning Button</cite></button>
+                        <button><del>Danger Button</del></button>
+                    </div>
+                </section>
+
+                <section>
+                    <input type="text">
+                    <label>
+                        <span>Your Name (required), please:</span>
+                        <input type="text">
+                    </label>
+                    <label>
+                        <input type="text">
+                        <span>Name</span>
+                    </label>
+                </section>
+                <section>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" value="Chris" />
+                </section>
+                <section>
+                    <label for="pwd">Archetype: <input type="password" id="pwd"
+                            value="Wookie" /></label>
+                </section>
+
+                <fieldset>
+                    <legend>Do you agree?</legend>
+                    <section>
+                        <label for="chbx"><span>I
+                                agree</span><input type="checkbox" id="chbx"
+                                name="agree" value="Yes!" /></label>
+                        <label for="chbx"><span>I
+                                agree</span><input type="checkbox" disabled
+                                checked id="chbx" name="agree"
+                                value="Yes!" /></label>
+                    </section>
+                    <section>
+                        <label for="chbx"><input type="checkbox" id="chbx"
+                                name="agree" value="Yes!" /><span>I
+                                agree</span></label>
+                    </section>
+                </fieldset>
+
+                <fieldset disabled>
+                    <legend>Disabled login fieldset</legend>
+                    <section>
+                        <label for="name">Name:
+                            <input type="text" id="name" value="Chris" />
+                        </label>
+                    </section>
+                    <section>
+                        <label for="pwd">Archetype: </label>
+                        <input type="password" id="pwd" value="Wookie" />
+                    </section>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choose your favorite monster</legend>
+                    <section>
+                        <label for="kraken"><input type="radio" id="kraken"
+                                name="monster"
+                                value="K" /><span>Kraken</span></label>
+                        <label for="sasquatch"><input type="radio"
+                                id="sasquatch" name="monster"
+                                value="S" /><span>Sasquatch</span></label>
+                        <label for="mothman"><input type="radio" id="mothman"
+                                name="monster"
+                                value="M" /><span>Mothman</span></label>
+                    </section>
+
+                    <section>
+                        <label for="kraken"><input type="radio" id="kraken"
+                                name="monster"
+                                value="K" /><span>Kraken</span></label>
+                    </section>
+                    <section>
+                        <label for="sasquatch"><input type="radio"
+                                id="sasquatch" name="monster"
+                                value="S" /><span>Sasquatch</span></label>
+                    </section>
+                    <label for="mothman"><input type="radio" id="mothman"
+                            name="monster"
+                            value="M" /><span>Mothman</span></label>
+                    </section>
+
+                </fieldset>
+
+                <section>
+                    <legend>Choose your favorite monster</legend>
+                    <label for="kraken2">Kraken2 <input type="radio"
+                            id="kraken2" name="monster2" value="K" /></label>
+                    <label for="sasquatch2">Sasquatch2 <input type="radio"
+                            id="sasquatch2" name="monster2" value="S" /></label>
+                    <label for="mothman2">Mothman2 <input type="radio"
+                            id="mothman2" name="monster2" value="M" /></label>
+                </section>
+
+                <input type="text" list="datalist">
+                <datalist id="datalist">
+                    <option value="1">Data 1</option>
+                    <option value="2">Data 2</option>
+                </datalist>
+
+                <input type="range" min="0" max="50" id="tick" name="tick" />
+
+                <section>
+                    <input type="color" id="color" name="color"
+                        value="#FF0000" />
+                    <input type="date" id="date" name="date"
+                        value="2022-07-12" />
+                    <input type="datetime-local" id="datetime-local"
+                        name="datetime-local" value="2022-07-12T12:00:00" />
+                </section>
+
+                <section>
+                    <input type="file" id="file" name="file" />
+                    <input type="email" id="email" name="email"
+                        value="email@example.com" />
+                    <input type="hidden" id="hidden" name="hidden"
+                        value="hidden" />
+                    <input type="month" id="month" name="month"
+                        value="2022-07" />
+                </section>
+
+                <section>
+                    <input type="number" id="number" name="number"
+                        value="12345" />
+
+                    <input type="password" id="password" name="password"
+                        value="password" />
+
+                    <input type="search" id="search" name="search"
+                        value="Search" />
+                </section>
+
+                <section>
+                    <input type="tel" id="tel" name="tel"
+                        value="+1 (415) 555-0132" />
+
+                    <input type="text" id="text" name="text" value="text" />
+
+                    <input type="time" id="time" name="time" value="12:00:00" />
+                </section>
+
+                <section>
+                    <input type="url" id="url" name="url"
+                        value="http://www.w3schools.com" />
+
+                    <input type="week" id="week" name="week" value="2022-W01" />
+                    <select>
+                        <optgroup label="Group 1">
+                            <option>Option 1.1</option>
+                        </optgroup>
+                        <optgroup label="Group 2">
+                            <option disabled>Option 2.1</option>
+                            <option selected>Option 2.2</option>
+                        </optgroup>
+                        <optgroup label="Group 3" disabled>
+                            <option>Option 3.1</option>
+                            <option>Option 3.2</option>
+                            <option label="Option 3.3">Option-3.3</option>
+                        </optgroup>
+                    </select>
+                </section>
+
+                <section>
+                    <input type="image" id="image" name="image"
+                        src="http://www.w3schools.com/html/img_girl.jpg"
+                        alt="Girl" />
+
+                    <label for="pet-select">Choose a pet: <select name="pets"
+                            id="pet-select">
+                            <option value="">--Please choose an option--
+                            </option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Please choose one or more pets:
+                        <select name="pets" multiple size="4">
+                            <optgroup label="4-legged pets">
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="hamster" disabled>Hamster
+                                </option>
+                            </optgroup>
+                            <optgroup label="Flying pets">
+                                <option value="parrot">Parrot</option>
+                                <option value="macaw">Macaw</option>
+                                <option value="albatross">Albatross</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </section>
+
+                <section>
+                    <div>
+                        <label for="story">Tell us your story:</label>
+                        <textarea id="story" name="story" rows="5"
+                            cols="33">It was a dark and stormy night...</textarea>
+                    </div>
+                    <label>Tell us your story:
+                        <textarea rows="5"
+                            cols="15">Write something here</textarea>
+                    </label>
+
+                    <textarea name="textarea" rows="5" cols="30" minlength="10"
+                        maxlength="20">Write something here…</textarea>
+                </section>
+
+                <section>
+                    <textarea name="textarea" rows="5" cols="30"
+                        placeholder="Comment text."></textarea>
+
+                    <textarea name="textarea" rows="5" cols="30"
+                        readonly>I am a read-only textarea.</textarea>
+                    <textarea name="textarea" rows="5" cols="30"
+                        disabled>I am a disabled textarea.</textarea>
+                </section>
+            </form>
+
+            <h1>This is a H1 header</h1>
+            <h2>This is a H2 header</h2>
+            <h3>This is a H3 header</h3>
+            <h4>This is a H4 header</h4>
+            <h5>This is a H5 header</h5>
+            <h6>This is a H6 header</h6>
+            <p>
+                This is an example paragraph that demonstrates the use of
+                various <b>inline text elements</b>. You can use
+                <strong>strong text</strong> to emphasize importance, and
+                <em>emphasized text</em> for italicized emphasis.
+                Sometimes, you might want to use <i>italic text</i> without
+                emphasis. You can highlight text with the
+                <mark>mark element</mark>, or show <small>small text</small> for
+                fine print. When something is no longer
+                accurate or relevant, you can use the <del>deleted text</del>
+                element. Conversely, to indicate new or
+                inserted content, use the <ins>inserted text</ins> element. For
+                chemical formulas or mathematical
+                expressions, <sub>subscripts</sub> and <sup>superscripts</sup>
+                are very useful. To link to another
+                page, you can use an <a href="https://www.example.com">anchor
+                    tag</a>. When introducing an
+                abbreviation, you can use the <abbr
+                    title="HyperText Markup Language">HTML</abbr> tag.
+                The abbreviations may have no title attribute, in which case
+                the title attribute is used as the abbreviation text like
+                <abbr>this one</abbr>.
+                To cite a
+                source,
+                use the <cite>citation element</cite>. For inline code snippets,
+                use the <code>var x = 1;</code>, and to
+                show keyboard input, use the <kbd>Ctrl+Alt+Del</kbd>.
+                To include a short inline quotation,
+                use the <q
+                    cite="https://www.mozilla.org/en-US/about/history/details/">quote
+                    element</q>. When text should appear struck
+                through, use the <s>strikethrough element</s>.
+                The <span>span element</span> is useful for applying styles to a
+                part of the text. For underlined text,
+                use the <u>underline element</u>. Finally, you can use the
+                <time datetime="2024-06-24">time element</time> to mark up dates
+                and times. These elements
+                allow you to structure and present your content effectively
+                within a paragraph.
+                There is also the <samp>sample element</samp> that you can use
+                in the code or the <data value="1">data element</data>.
+            </p>
+
+            <section>
+                <table>
+                    <caption>
+                        Status of the club members 2021
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" rowspan="2">Name</th>
+                            <th scope="col" rowspan="2">ID</th>
+                            <th scope="col" colspan="2">Membership Dates</th>
+                            <th scope="col" rowspan="2">Balance</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column</th>
+                            <th>Column!</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th scope="col">Joined</th>
+                            <th scope="col">Canceled</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Margaret Nguyen</th>
+                            <td>427311</td>
+                            <td><time datetime="2010-06-03">June 3, 2010</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>1.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Edvard Galinski</th>
+                            <td>533175</td>
+                            <td><time datetime="2011-01-13">January 13,
+                                    2011</time>
+                            </td>
+                            <td><time datetime="2017-04-08">April 8, 2017</time>
+                            </td>
+                            <td>37.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hoshi Nakamura</th>
+                            <td>601942</td>
+                            <td><time datetime="2012-07-23">July 23, 2012</time>
+                            </td>
+                            <td>n/a</td>
+                            <td>15.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Total balance</th>
+                            <td colspan="23"></td>
+                            <td>52.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <pre><code>function add(x, y) {
+    return x + y;
+}</code></pre>
+
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <h1>HTML: Living Standard</h1>
+                <p>Words can be like X-rays, if you use them properly—they'll go
+                    through anything. You read and you're pierced.</p>
+                <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+            </blockquote>
+
+            <hgroup>
+                <h1>HTML: Living Standard</h1>
+                <p>Words can be like X-rays, if you use them properly—they'll go
+                    through anything. You read and you're pierced.</p>
+                <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+            </hgroup>
+
+            <details>
+                <summary>System Requirements</summary>
+                <p>
+                    Requires a computer running an operating system. The
+                    computer must
+                    have some
+                    memory and ideally some kind of long-term storage. An input
+                    device
+                    as well
+                    as some form of output device is recommended.
+                </p>
+                <details open>
+                    <summary>System Requirements</summary>
+                    <p>
+                        Requires a computer running an operating system. The
+                        computer must
+                        have some
+                        memory and ideally some kind of long-term storage. An
+                        input
+                        device
+                        as well
+                        as some form of output device is recommended.
+                    </p>
+                    <details>
+                        <summary>System Requirements</summary>
+                        <p>
+                            Requires a computer running an operating system. The
+                            computer must
+                            have some
+                            memory and ideally some kind of long-term storage.
+                            An input
+                            device
+                            as well
+                            as some form of output device is recommended.
+                        </p>
+                    </details>
+                </details>
+            </details>
+
+            <section>
+                <ul>
+                    <li>Neil Armstrong</li>
+                    <li>Alan Bean</li>
+                    <li>Peter Conrad</li>
+                    <li>Edgar Mitchell</li>
+                    <li>Alan Shepard</li>
+                </ul>
+                <ol>
+                    <li>Neil Armstrong</li>
+                    <li>Alan Bean</li>
+                    <li value="">Peter Conrad</li>
+                    <li>Edgar Mitchell</li>
+                    <li>Alan Shepard</li>
+                </ol>
+                <ol>
+                    <li type="a">Neil Armstrong</li>
+                    <li type="A">Alan Bean</li>
+                    <li type="i">Peter Conrad</li>
+                    <li type="I">Edgar Mitchell</li>
+                    <li type="1">Alan Shepard</li>
+                </ol>
+                <ol reversed>
+                    <li>first item</li>
+                    <li>
+                        second item
+                        <ol>
+                            <li>second item first subitem</li>
+                            <li>second item second subitem</li>
+                            <li>second item third subitem</li>
+                        </ol>
+                    </li>
+                    <li>third item</li>
+                </ol>
+            </section>
+
+
+            <p>
+                This meter is optimal
+                <meter value="0.7" min="0" max="1" low="0.3" high="0.6"
+                    optimum="0.8"></meter>. Whereas this one is not
+                <meter value="0.4" min="0" max="1" low="0.3" high="0.6"
+                    optimum="0.8"></meter>, it is suboptimal. And this one is
+                <meter value="0.2" min="0" max="1" low="0.3" high="0.6"
+                    optimum="0.8"></meter> simply not good at all.
+            </p>
+
+            <hr />
+
+            <progress value="70" max="100">70 %</progress>
+
+            <hr />
+
+            <dl>
+                <dt>Beast of Bodmin</dt>
+                <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+                <dt>Morgawr</dt>
+                <dd>A sea serpent.</dd>
+
+                <dt>Owlman</dt>
+                <dd>A giant owl-like creature.</dd>
+                <dt>Firefox</dt>
+                <dd>
+                    A free, open source, cross-platform, graphical web browser
+                    developed
+                    by
+                    the
+                    Mozilla Corporation and hundreds of volunteers.
+                </dd>
+                <dt>Firefox</dt>
+                <dt>Mozilla Firefox</dt>
+                <dt>Fx</dt>
+                <dd>
+                    A free, open source, cross-platform, graphical web browser
+                    developed
+                    by the
+                    Mozilla Corporation and hundreds of volunteers.
+                </dd>
+                <dt>Firefox</dt>
+                <dd>
+                    A free, open source, cross-platform, graphical web browser
+                    developed
+                    by the
+                    Mozilla Corporation and hundreds of volunteers.
+                </dd>
+                <dd>
+                    The Red Panda also known as the Lesser Panda, Wah, Bear Cat
+                    or
+                    Firefox, is a
+                    mostly herbivorous mammal, slightly larger than a domestic
+                    cat (60
+                    cm long).
+                </dd>
+            </dl>
+
+            <hr />
+
+            <section>
+                <div>
+                    <img src="http://www.w3schools.com/html/img_girl.jpg"
+                        alt="Girl" />
+                </div>
+                <div>
+                    <figure>
+                        <img src="http://www.w3schools.com/html/img_girl.jpg"
+                            alt="Girl" />
+                        <figcaption>A girl</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <picture>
+                        <source
+                            srcset="https://www.w3schools.com/html/img_girl.jpg"
+                            media="(max-width: 600px)">
+                        <img src="https://www.w3schools.com/html/img_girl.jpg"
+                            alt="Girl" />
+                    </picture>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4"
+                            type="video/mp4" />
+                        <source src="https://www.w3schools.com/html/mov_bbb.ogg"
+                            type="video/ogg" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div> <iframe src="https://example.org" title="iframe Example 1"
+                        width="400" height="300">
+                    </iframe>
+                </div>
+                <div>
+                    <iframe id="inlineFrameExample" title="Inline Frame Example"
+                        width="300" height="200"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                    </iframe>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <audio src="https://www.w3schools.com/html/horse.mp3"
+                        controls></audio>
+                </div>
+            </section>
+
+            <hr />
+
+            <section>
+                <div>
+                    <address>
+                        <div>
+                            <a
+                                href="mailto:jim@example.com">jim@example.com</a><br />
+                            <a href="tel:+14155550132">+1 (415) 555-0132</a>
+                        </div>
+                    </address>
+                </div>
+                <div>
+                    <address>
+                        <figure>
+                            <img src="http://www.w3schools.com/html/img_girl.jpg"
+                                alt="Girl" />
+                            <figcaption>A girl</figcaption>
+                        </figure>
+                        <div>
+                            You can contact author at
+                            <a
+                                href="http://www.example.com/contact">www.example.com</a>.<br />
+                            If you see any bugs, please
+                            <a href="mailto:webmaster@example.com">contact
+                                webmaster</a>.<br />
+                            You may also want to visit us:<br />
+                            Mozilla Foundation<br />
+                            331 E Evelyn Ave<br />
+                            Mountain View, CA 94041<br />
+                            USA
+                        </div>
+                    </address>
+                </div>
+            </section>
+
+            <hr />
+
+            <fieldset>
+                <legend><em>Legend</em></legend>
+                This is a paragraph.
+            </fieldset>
+        </article>
+    </main>
+    <footer>
+        <div>This is a footer. Это футер. Սա ստորագիր է։</div>
+    </footer>
+</body>
+
+</html>
