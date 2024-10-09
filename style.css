@@ -76,6 +76,38 @@
 
   --color-background: var(--color-light);
   --color-text: var(--color-dark);
+
+  --transition-duration: 0.3s;
+}
+
+/* Apply border-color transition to buttons and inputs */
+button:hover,
+input:hover,
+textarea:hover,
+select:hover,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:active,
+input:active,
+textarea:active,
+select:active {
+  transition: border-color var(--transition-duration) ease-in-out;
+}
+
+/* Specific transitions for checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  transition: background-color var(--transition-duration) ease-in-out,
+              border-color var(--transition-duration) ease-in-out;
+}
+
+/* Specific transitions for range inputs */
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-ms-thumb {
+  transition: background-color var(--transition-duration) ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,6 +163,7 @@ footer {
   display: flex;
   flex-shrink: 0;
   padding: 0.5em 1em;
+  box-shadow: 0em 0em 0.5em var(--color-gray-opacity);
 }
 
 header nav {
@@ -454,6 +487,7 @@ progress {
   width: 100%;
 }
 
+/* TODO: fix on safari */
 progress[value] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -502,9 +536,9 @@ meter {
   border: 0;
   border-radius: 0.5em;
   overflow: hidden;
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; */
+  appearance: none;
 }
 
 meter::-webkit-meter-bar {
@@ -618,6 +652,13 @@ dialog {
   border-radius: var(--large-border-radius);
   border: 1px solid var(--color-text);
   padding: 1em;
+}
+
+dialog button,
+dialog input[type="submit"],
+dialog input[type="reset"],
+dialog input[type="button"] {
+  border: 0.1em solid var(--color-gray);
 }
 
 dialog::backdrop {
@@ -934,6 +975,31 @@ select {
   box-shadow: none;
   outline: none;
   width: 100%;
+  height: auto;
+  min-height: 2.75em;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 2.75em;
+  padding: 0.5em;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 input[type="text"]:focus,
@@ -1252,7 +1318,16 @@ input[type="color"] {
   appearance: none;
   height: calc(var(--line-height) * 1em + 1em);
   cursor: pointer;
-  padding: var(--small-padding);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: var(--small-border-radius);
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
