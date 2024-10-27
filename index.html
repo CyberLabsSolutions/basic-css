@@ -26,7 +26,7 @@
         <aside>
             <strong>Menu</strong>
             <menu>
-                <details open>
+                <details>
                     <summary>Typography</summary>
                     <ul>
                         <li><a href="#headings">Headings</a></li>
@@ -49,6 +49,8 @@
                                 </li>
                                 <li><a href="#cite">Citation</a></li>
                                 <li><a href="#code">Code</a></li>
+                                <li><a href="#preformatted">Preformatted</a>
+                                </li>
                                 <li><a href="#keyboard">Keyboard</a></li>
                                 <li><a href="#quote">Quote</a></li>
                                 <li><a href="#strikethrough">Strikethrough</a>
@@ -58,51 +60,60 @@
                                 <li><a href="#time">Time</a></li>
                                 <li><a href="#sample">Sample</a></li>
                                 <li><a href="#data">Data</a></li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Complex components</summary>
+                            <ul>
                                 <li><a href="#in-place-usage">In-place usage</a>
                                 </li>
+                                <li><a href="#blockquote">Blockquote</a></li>
+                                <li><a href="#hgroup">Heading Group</a></li>
+                                <li><a href="#legend">Legend</a></li>
+                                <li><a href="#details">Details</a></li>
+                                <li><a href="#breadcrumb">Breadcrumb</a></li>
+                                <li><a href="#pagination">Pagination</a></li>
                             </ul>
                         </details>
                     </ul>
-                    <details>
-                        <summary>Buttons</summary>
-                        <ul>
-                            <li><a href="#button">Button</a></li>
-                            <li><a href="#submit-button">Submit button</a></li>
-                            <li><a href="#reset-button">Reset button</a></li>
-                            <li><a href="#negative-button">Negative button</a>
-                            </li>
-                            <li><a href="#info-button">Info button</a></li>
-                            <li><a href="#success-button">Success button</a>
-                            </li>
-                            <li><a href="#warning-button">Warning button</a>
-                            </li>
-                            <li><a href="#danger-button">Danger button</a></li>
-                            <li><a href="#disabled-button">Disabled button</a>
-                            </li>
-                            <li><a href="#disabled-submit-button">Disabled
-                                    submit button</a></li>
-                            <li><a href="#disabled-reset-button">Disabled reset
-                                    button</a></li>
-                            <li><a href="#disabled-negative-button">Disabled
-                                    negative button</a></li>
-                            <li><a href="#input-like-button">Input-like
-                                    button</a></li>
-                            <li><a href="#input-like-submit-button">Input-like
-                                    submit button</a></li>
-                            <li><a href="#input-like-reset-button">Input-like
-                                    reset button</a></li>
-                            <li><a href="#input-like-negative-button">Input-like
-                                    negative button</a></li>
-                            <li><a href="#disabled-input-like-submit-button">Disabled
-                                    input-like submit button</a></li>
-                            <li><a href="#disabled-input-like-reset-button">Disabled
-                                    input-like reset button</a></li>
-                            <li><a href="#disabled-input-like-negative-button">Disabled
-                                    input-like negative button</a></li>
-                            <li><a href="#buttons-together">Buttons together</a>
-                            </li>
-                        </ul>
-                    </details>
+                </details>
+                <details>
+                    <summary>Buttons</summary>
+                    <ul>
+                        <li><a href="#button">Button</a></li>
+                        <li><a href="#submit-button">Submit button</a></li>
+                        <li><a href="#reset-button">Reset button</a></li>
+                        <li><a href="#negative-button">Negative button</a>
+                        </li>
+                        <li><a href="#info-button">Info button</a></li>
+                        <li><a href="#success-button">Success button</a>
+                        </li>
+                        <li><a href="#warning-button">Warning button</a>
+                        </li>
+                        <li><a href="#danger-button">Danger button</a></li>
+                        <li><a href="#disabled-button">Disabled button</a>
+                        </li>
+                        <li><a href="#disabled-submit-button">Disabled
+                                submit button</a></li>
+                        <li><a href="#disabled-reset-button">Disabled reset
+                                button</a></li>
+                        <li><a href="#disabled-negative-button">Disabled
+                                negative button</a></li>
+                        <li><a href="#input-like-submit-button">Input-like
+                                submit button</a></li>
+                        <li><a href="#input-like-reset-button">Input-like
+                                reset button</a></li>
+                        <li><a href="#input-like-negative-button">Input-like
+                                negative button</a></li>
+                        <li><a href="#disabled-input-like-submit-button">Disabled
+                                input-like submit button</a></li>
+                        <li><a href="#disabled-input-like-reset-button">Disabled
+                                input-like reset button</a></li>
+                        <li><a href="#disabled-input-like-negative-button">Disabled
+                                input-like negative button</a></li>
+                        <li><a href="#buttons-together">Buttons together</a>
+                        </li>
+                    </ul>
                     <details open>
                         <summary>System Requirements</summary>
                         <ul>
@@ -242,6 +253,10 @@
             <code>This is a code text.</code>
             <pre><code>&lt;code&gt;This is a code text.&lt;/code&gt;</code></pre>
 
+            <h3 id="preformatted">Preformatted</h3>
+            <pre>This is a preformatted text.</pre>
+            <pre><code>&lt;pre&gt;This is a preformatted text.&lt;/pre&gt;</code></pre>
+
             <h3 id="keyboard">Keyboard</h3>
             <kbd>This is a keyboard input.</kbd>
             <pre><code>&lt;kbd&gt;This is a keyboard input.&lt;/kbd&gt;</code></pre>
@@ -274,6 +289,8 @@
             <h3 id="data">Data</h3>
             <data value="1">This is a data text.</data>
             <pre><code>&lt;data value="1"&gt;This is a data text.&lt;/data&gt;</code></pre>
+
+            <h2 id="complex-components">Complex components</h2>
 
             <h3 id="in-place-usage">In-place usage</h3>
             <p>
@@ -353,7 +370,160 @@
     code or the &lt;data value="1"&gt;data element&lt;/data&gt;.
 &lt;/p&gt;</code></pre>
 
-            <h2 id="Buttons">Buttons</h2>
+            <h3 id="breadcrumb">Breadcrumb</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">This</a></li>
+                    <li><a href="#">Is</a></li>
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">Breadcrumb</a></li>
+                </ul>
+            </nav>
+            <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;This&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Is&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Breadcrumb&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+            <h3 id="pagination">Pagination</h3>
+            <nav>
+                <ol>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li>...</li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="#">Last</a></li>
+                </ol>
+            </nav>
+            <pre><code>&lt;nav&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a href="#"&gt;First&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;...&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Last&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+
+            <h3 id="blockquote">Blockquote</h3>
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <h1>HTML: Living Standard</h1>
+                <p>Words can be like X-rays, if you use them properly—they'll go
+                    through anything. You read and you're pierced.</p>
+                <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+            </blockquote>
+            <pre><code>&lt;blockquote cite="https://www.huxley.net/bnw/four.html"&gt;
+    &lt;h1&gt;HTML: Living Standard&lt;/h1&gt;
+    &lt;p&gt;Words can be like X-rays, if you use them properly—they'll go through anything. You read and you're pierced.&lt;/p&gt;
+    &lt;footer&gt;—Aldous Huxley, &lt;cite&gt;Brave New World&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+
+            <h3 id="hgroup">Heading Group</h3>
+            <hgroup>
+                <h1>HTML: Living Standard</h1>
+                <p>Words can be like X-rays, if you use them properly—they'll go
+                    through anything. You read and you're pierced.</p>
+                <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+            </hgroup>
+            <pre><code>&lt;hgroup&gt;
+    &lt;h1&gt;HTML: Living Standard&lt;/h1&gt;
+    &lt;p&gt;Words can be like X-rays, if you use them properly—they'll go through anything. You read and you're pierced.&lt;/p&gt;
+    &lt;footer&gt;—Aldous Huxley, &lt;cite&gt;Brave New World&lt;/cite&gt;&lt;/footer&gt;
+&lt;/hgroup&gt;</code></pre>
+
+            <h3 id="legend">Legend</h3>
+            <fieldset>
+                <legend>Legend</legend>
+                This is a paragraph.
+            </fieldset>
+            <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Legend&lt;/legend&gt;
+    This is a paragraph.
+&lt;/fieldset&gt;</code></pre>
+
+            <h3 id="details">Details</h3>
+            <details>
+                <summary>System Requirements</summary>
+                <p>
+                    Requires a computer running an operating system. The
+                    computer must
+                    have some
+                    memory and ideally some kind of long-term storage. An input
+                    device
+                    as well
+                    as some form of output device is recommended.
+                </p>
+                <details open>
+                    <summary>System Requirements</summary>
+                    <p>
+                        Requires a computer running an operating system. The
+                        computer must
+                        have some
+                        memory and ideally some kind of long-term storage. An
+                        input
+                        device
+                        as well
+                        as some form of output device is recommended.
+                    </p>
+                    <details>
+                        <summary>System Requirements</summary>
+                        <p>
+                            Requires a computer running an operating system. The
+                            computer must
+                            have some
+                            memory and ideally some kind of long-term storage.
+                            An input
+                            device
+                            as well
+                            as some form of output device is recommended.
+                        </p>
+                    </details>
+                </details>
+            </details>
+            <pre><code>&lt;details&gt;
+    &lt;summary&gt;System Requirements&lt;/summary&gt;
+    &lt;p&gt;
+        Requires a computer running an operating system. The computer must
+        have some
+        memory and ideally some kind of long-term storage. An input
+        device
+        as well
+        as some form of output device is recommended.
+    &lt;/p&gt;
+    &lt;details open&gt;
+        &lt;summary&gt;System Requirements&lt;/summary&gt;
+        &lt;p&gt;
+            Requires a computer running an operating system. The computer must
+            have some
+            memory and ideally some kind of long-term storage. An input
+            device
+            as well
+            as some form of output device is recommended.
+        &lt;/p&gt;
+        &lt;details&gt;
+            &lt;summary&gt;System Requirements&lt;/summary&gt;
+            &lt;p&gt;
+                Requires a computer running an operating system. The computer must
+                have some
+                memory and ideally some kind of long-term storage. An input
+                device
+                as well
+                as some form of output device is recommended.
+            &lt;/p&gt;
+        &lt;/details&gt;
+    &lt;/details&gt;
+&lt;/details&gt;</code></pre>
+
+            <h1>Buttons</h1>
 
             <h3 id="button">Button</h3>
             <button>Button</button>
@@ -403,7 +573,7 @@
             <button type="button" disabled>Negative button</button>
             <pre><code>&lt;button type="button" disabled&gt;Negative button&lt;/button&gt;</code></pre>
 
-            <h3 id="input-like-button">Input-like button</h3>
+            <h3 id="input-like-submit-button">Input-like submit button</h3>
             <input type="submit" id="submit" name="submit"
                 value="Input Submit" />
             <pre><code>&lt;input type="submit" id="submit" name="submit" value="Input Submit" /&gt;</code></pre>
@@ -470,27 +640,6 @@
                 </div>
             </section>
 
-            <nav>
-                <ul>
-                    <li><a href="#">This</a></li>
-                    <li><a href="#">Is</a></li>
-                    <li><a href="#">A</a></li>
-                    <li><a href="#">Breadcrumb</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ol>
-                    <li><a href="#">First</a></li>
-                    <li><a href="#">Previous</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li>...</li>
-                    <li><a href="#">Next</a></li>
-                    <li><a href="#">Last</a></li>
-                </ol>
-            </nav>
-
             <section>
                 <div>
                     <dialog id="myDialog">
@@ -509,8 +658,6 @@
             </section>
 
             <form>
-
-
                 <section>
                     <input type="text">
                     <label>
@@ -1868,63 +2015,6 @@
                 </table>
             </section>
 
-            <pre><code>function add(x, y) {
-    return x + y;
-}</code></pre>
-
-            <blockquote cite="https://www.huxley.net/bnw/four.html">
-                <h1>HTML: Living Standard</h1>
-                <p>Words can be like X-rays, if you use them properly—they'll go
-                    through anything. You read and you're pierced.</p>
-                <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
-            </blockquote>
-
-            <hgroup>
-                <h1>HTML: Living Standard</h1>
-                <p>Words can be like X-rays, if you use them properly—they'll go
-                    through anything. You read and you're pierced.</p>
-                <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
-            </hgroup>
-
-            <details>
-                <summary>System Requirements</summary>
-                <p>
-                    Requires a computer running an operating system. The
-                    computer must
-                    have some
-                    memory and ideally some kind of long-term storage. An input
-                    device
-                    as well
-                    as some form of output device is recommended.
-                </p>
-                <details open>
-                    <summary>System Requirements</summary>
-                    <p>
-                        Requires a computer running an operating system. The
-                        computer must
-                        have some
-                        memory and ideally some kind of long-term storage. An
-                        input
-                        device
-                        as well
-                        as some form of output device is recommended.
-                    </p>
-                    <details>
-                        <summary>System Requirements</summary>
-                        <p>
-                            Requires a computer running an operating system. The
-                            computer must
-                            have some
-                            memory and ideally some kind of long-term storage.
-                            An input
-                            device
-                            as well
-                            as some form of output device is recommended.
-                        </p>
-                    </details>
-                </details>
-            </details>
-
             <section>
                 <ul>
                     <li>Neil Armstrong</li>
@@ -1960,7 +2050,6 @@
                     <li>third item</li>
                 </ol>
             </section>
-
 
             <p>
                 This meter is optimal
@@ -2112,11 +2201,6 @@
             </section>
 
             <hr />
-
-            <fieldset>
-                <legend><em>Legend</em></legend>
-                This is a paragraph.
-            </fieldset>
         </article>
     </main>
     <footer>
@@ -2125,3 +2209,7 @@
 </body>
 
 </html>
+
+<!-- TODO: Implement hr -->
+<!-- TODO: Implement progress -->
+<!-- TODO: Fix horizontal slider -->

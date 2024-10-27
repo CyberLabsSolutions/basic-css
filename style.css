@@ -305,7 +305,7 @@ abbr[title] {
 abbr[title]::before {
   content: attr(title);
   position: absolute;
-  bottom: 125%;
+  bottom: 127%;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-background);
@@ -358,7 +358,7 @@ time[datetime] {
 time[datetime]::before {
   content: attr(datetime);
   position: absolute;
-  bottom: 125%;
+  bottom: 127%;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-background);
@@ -848,6 +848,9 @@ details p {
 menu {
   padding: 0;
   margin: 0;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 menu details {
@@ -865,7 +868,16 @@ details > summary {
 menu details > summary {
   color: var(--color-blue);
   background: none;
-  padding: 0;
+  padding: 0.25em 0.5em;
+  border-radius: var(--small-border-radius);
+}
+
+menu details > summary:hover {
+  background-color: var(--color-gray-opacity);
+}
+
+menu details > summary:focus {
+  background-color: var(--color-gray-opacity);
 }
 
 menu ul {
@@ -873,6 +885,24 @@ menu ul {
   padding: 0;
   margin: 0;
   padding-left: 1em;
+}
+
+menu ul li {
+  border-radius: var(--small-border-radius);
+}
+
+menu ul li a {
+  display: block;
+  padding: 0.25em 0.5em;
+  border-radius: var(--small-border-radius);
+}
+
+menu ul li a:hover {
+  background-color: var(--color-gray-opacity);
+}
+
+menu ul li a:focus {
+  background-color: var(--color-gray-opacity);
 }
 
 address {
