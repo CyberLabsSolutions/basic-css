@@ -114,30 +114,52 @@
                         <li><a href="#buttons-together">Buttons together</a>
                         </li>
                     </ul>
-                    <details open>
-                        <summary>System Requirements</summary>
-                        <ul>
-                            <li><a href="#">Users</a></li>
-                            <li><a href="#">Devices</a></li>
-                            <li><a href="#">Network</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                        <details>
-                            <summary>System Requirements</summary>
-                            <ul>
-                                <li><a href="#">Users</a></li>
-                                <li><a href="#">Devices</a></li>
-                                <li><a href="#">Network</a></li>
-                                <li><a href="#">Settings</a></li>
-                                <li><a href="#">About</a></li>
-                            </ul>
-                        </details>
-                    </details>
+                </details>
+                <details>
+                    <summary>Forms</summary>
+                    <ul>
+                        <li><a href="#input">Input</a></li>
+                        <li><a href="#input-with-label">Input with label</a>
+                        </li>
+                        <li><a href="#input-with-label-after-input">Input with
+                                label after input</a></li>
+                        <li><a href="#input-with-label-before-input">Input with
+                                label before input</a></li>
+                        <li><a href="#input-inside-label">Input inside label</a>
+                        </li>
+                        <li><a href="#readonly-input">Readonly input</a></li>
+                        <li><a href="#disabled-input">Disabled input</a></li>
+                        <li><a href="#password-input">Password input</a></li>
+                        <li><a href="#search-input">Search input</a></li>
+                        <li><a href="#tel-input">Tel input</a></li>
+                        <li><a href="#url-input">Url input</a></li>
+                        <li><a href="#email-input">Email input</a></li>
+                        <li><a href="#date-input">Date input</a></li>
+                        <li><a href="#month-input">Month input</a></li>
+                        <li><a href="#week-input">Week input</a></li>
+                        <li><a href="#time-input">Time input</a></li>
+                        <li><a href="#datetime-local-input">Datetime-local input
+                            </a></li>
+                        <li><a href="#number-input">Number input</a></li>
+                        <li><a href="#range-input">Range input</a></li>
+                        <li><a href="#color-input">Color input</a></li>
+                        <li><a href="#file-input">File input</a></li>
+                        <li><a href="#hidden-input">Hidden input</a></li>
+                        <li><a href="#datalist">Datalist</a></li>
+                        <li><a href="#select">Select</a></li>
+                        <li><a href="#select-with-optgroup">Select with
+                                optgroup</a>
+                        <li><a href="#multiselect">Multiselect</a></li>
+                        <li><a href="#checkbox-on-left">Checkbox on left</a>
+                        </li>
+                        <li><a href="#checkbox-on-right">Checkbox on right</a>
+                    </ul>
                 </details>
             </menu>
         </aside>
         <article>
+
+            <!-- #region: Typography -->
             <h1>Typography</h1>
             <h2 id="headings">Headings</h2>
 
@@ -523,6 +545,9 @@
     &lt;/details&gt;
 &lt;/details&gt;</code></pre>
 
+            <!-- #endregion-->
+
+            <!-- #region: Buttons -->
             <h1>Buttons</h1>
 
             <h3 id="button">Button</h3>
@@ -640,6 +665,348 @@
                 </div>
             </section>
 
+            <!-- #endregion-->
+
+            <!-- #region: Forms -->
+            <h1>Forms</h1>
+            <h2 id="forms">Forms</h2>
+
+            <h3 id="input">Input</h3>
+            <form>
+                <input type="text">
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="text"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="input-with-label">Input with label</h3>
+            <form>
+                <label>
+                    <span>Your Name, please:</span>
+                    <input type="text">
+                </label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label&gt;
+        &lt;span&gt;Your Name, please:&lt;/span&gt;
+        &lt;input type="text"&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="input-with-label-after-input">Input with label after input
+            </h3>
+            <form>
+                <label>
+                    <input type="text">
+                    <span>Your Name, please:</span>
+                </label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label&gt;
+        &lt;input type="text"&gt;
+        &lt;span&gt;Your Name, please:&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="input-with-label-before-input">Input with label before input
+            </h3>
+            <form>
+                <section>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" value="Chris" />
+                </section>
+            </form>
+
+            <pre><code>&lt;form&gt;
+    &lt;section&gt;
+        &lt;label for="name"&gt;Name: &lt;/label&gt;
+        &lt;input type="text" id="name" value="Chris" /&gt;
+    &lt;/section&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="input-inside-label">Input inside label</h3>
+            <form>
+                <label for="surname">Surname: <input type="text" id="surname"
+                        value="Smith" /></label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name: &lt;input type="text" id="name" value="Chris" /&gt;&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="readonly-input">Readonly input</h3>
+            <form>
+                <input type="text" readonly value="Readonly input" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="text" readonly&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="disabled-input">Disabled input</h3>
+            <form>
+                <input type="text" disabled value="Disabled input" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="text" disabled&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="password-input">Password input</h3>
+            <form>
+                <input type="password" value="Password input" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="password"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="search-input">Search input</h3>
+            <form>
+                <input type="search" value="Search input" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="search"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="tel-input">Tel input</h3>
+            <form>
+                <input type="tel" value="+1 (415) 555-0132" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="tel"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="url-input">Url input</h3>
+            <form>
+                <input type="url" value="http://www.w3schools.com" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="url"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="email-input">Email input</h3>
+            <form>
+                <input type="email" value="email@example.com" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="email"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="date-input">Date input</h3>
+            <form>
+                <input type="date" value="2022-07-12" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="date"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="month-input">Month input</h3>
+            <form>
+                <input type="month" value="2022-07" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="month"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="week-input">Week input</h3>
+            <form>
+                <input type="week" value="2022-W01" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="week"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="time-input">Time input</h3>
+            <form>
+                <input type="time" value="12:00:00" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="time"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="datetime-local-input">Datetime-local input</h3>
+            <form>
+                <input type="datetime-local" value="2022-07-12T12:00:00" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="datetime-local"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="number-input">Number input</h3>
+            <form>
+                <input type="number" value="12345" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="number"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="range-input">Range input</h3>
+            <form>
+                <input type="range" min="0" max="50" value="12" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="range" min="0" max="50" value="12" /&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="color-input">Color input</h3>
+            <form>
+                <input type="color" value="#FF0000" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="color"&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="file-input">File input</h3>
+            <form>
+                <input type="file" id="file" name="file" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="file" id="file" name="file" /&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="hidden-input">Hidden input</h3>
+            <form>
+                <input type="hidden" id="hidden" name="hidden" value="hidden" />
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="hidden" id="hidden" name="hidden" value="hidden" /&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="datalist">Datalist</h3>
+            <form>
+                <input type="text" list="datalist-set">
+                <datalist id="datalist-set">
+                    <option value="1">Data 1</option>
+                    <option value="2">Data 2</option>
+                </datalist>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;input type="text" list="datalist-set"&gt;
+    &lt;datalist id="datalist-set"&gt;
+        &lt;option value="1"&gt;Data 1&lt;/option&gt;
+        &lt;option value="2"&gt;Data 2&lt;/option&gt;
+    &lt;/datalist&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="select">Select</h3>
+            <form>
+                <label for="pet-select">Choose a pet: <select name="pets"
+                        id="pet-select">
+                        <option value="">--Please choose an option--
+                        </option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="parrot">Parrot</option>
+                        <option value="spider">Spider</option>
+                        <option value="goldfish">Goldfish</option>
+                    </select>
+                </label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label for="pet-select"&gt;Choose a pet: &lt;select name="pets" id="pet-select"&gt;
+        &lt;option value=""&gt;--Please choose an option--&lt;/option&gt;
+        &lt;option value="dog"&gt;Dog&lt;/option&gt;
+        &lt;option value="cat"&gt;Cat&lt;/option&gt;
+        &lt;option value="hamster"&gt;Hamster&lt;/option&gt;
+        &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
+        &lt;option value="spider"&gt;Spider&lt;/option&gt;
+        &lt;option value="goldfish"&gt;Goldfish&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="select-with-optgroup">Select with optgroup</h3>
+            <form>
+                <select>
+                    <optgroup label="Group 1">
+                        <option>Option 1.1</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option disabled>Option 2.1</option>
+                        <option selected>Option 2.2</option>
+                    </optgroup>
+                    <optgroup label="Group 3" disabled>
+                        <option>Option 3.1</option>
+                        <option>Option 3.2</option>
+                        <option label="Option 3.3">Option-3.3</option>
+                    </optgroup>
+                </select>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;select&gt;
+        &lt;optgroup label="Group 1"&gt;
+            &lt;option&gt;Option 1.1&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="Group 2"&gt;
+            &lt;option disabled&gt;Option 2.1&lt;/option&gt;
+            &lt;option selected&gt;Option 2.2&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label="Group 3" disabled&gt;
+            &lt;option&gt;Option 3.1&lt;/option&gt;
+            &lt;option&gt;Option 3.2&lt;/option&gt;
+            &lt;option label="Option 3.3"&gt;Option-3.3&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="multiselect">Multiselect</h3>
+            <form>
+                <label>
+                    Please choose one or more pets:
+                    <select name="pets" multiple size="4">
+                        <optgroup label="4-legged pets">
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster" disabled>Hamster
+                            </option>
+                        </optgroup>
+                        <optgroup label="Flying pets">
+                            <option value="parrot">Parrot</option>
+                            <option value="macaw">Macaw</option>
+                            <option value="albatross">Albatross</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label&gt;
+        Please choose one or more pets:
+        &lt;select name="pets" multiple size="4"&gt;
+            &lt;optgroup label="4-legged pets"&gt;
+                &lt;option value="dog"&gt;Dog&lt;/option&gt;
+                &lt;option value="cat"&gt;Cat&lt;/option&gt;
+                &lt;option value="hamster" disabled&gt;Hamster
+                &lt;/option&gt;
+            &lt;/optgroup&gt;
+            &lt;optgroup label="Flying pets"&gt;
+                &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
+                &lt;option value="macaw"&gt;Macaw&lt;/option&gt;
+                &lt;option value="albatross"&gt;Albatross&lt;/option&gt;
+            &lt;/optgroup&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="checkbox-on-left">Checkbox on left</h3>
+            <form>
+                <label for="checkbox-on-l"><input type="checkbox"
+                        id="checkbox-on-l" value="Yes!" /><span>I
+                        agree</span></label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label for="checkbox-on-l"&gt;&lt;input type="checkbox" id="checkbox-on-l" name="agree" value="Yes!" /&gt;&lt;span&gt;I agree&lt;/span&gt;&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3 id="checkbox-on-right">Checkbox on right</h3>
+            <form>
+                <label for="checkbox-on-r"><span>I
+                        agree</span><input type="checkbox" id="checkbox-on-r"
+                        value="Yes!" /></label>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;label for="checkbox-on-r"&gt;&lt;span&gt;I agree&lt;/span&gt;&lt;input type="checkbox" id="checkbox-on-r" name="agree" value="Yes!" /&gt;&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+
+            <!-- #endregion-->
+
             <section>
                 <div>
                     <dialog id="myDialog">
@@ -658,26 +1025,6 @@
             </section>
 
             <form>
-                <section>
-                    <input type="text">
-                    <label>
-                        <span>Your Name (required), please:</span>
-                        <input type="text">
-                    </label>
-                    <label>
-                        <input type="text">
-                        <span>Name</span>
-                    </label>
-                </section>
-                <section>
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" value="Chris" />
-                </section>
-                <section>
-                    <label for="pwd">Archetype: <input type="password" id="pwd"
-                            value="Wookie" /></label>
-                </section>
-
                 <fieldset>
                     <legend>Do you agree?</legend>
                     <section>
@@ -750,108 +1097,10 @@
                             id="mothman2" name="monster2" value="M" /></label>
                 </section>
 
-                <input type="text" list="datalist">
-                <datalist id="datalist">
-                    <option value="1">Data 1</option>
-                    <option value="2">Data 2</option>
-                </datalist>
-
-                <input type="range" min="0" max="50" id="tick" name="tick" />
-
-                <section>
-                    <input type="color" id="color" name="color"
-                        value="#FF0000" />
-                    <input type="date" id="date" name="date"
-                        value="2022-07-12" />
-                    <input type="datetime-local" id="datetime-local"
-                        name="datetime-local" value="2022-07-12T12:00:00" />
-                </section>
-
-                <section>
-                    <input type="file" id="file" name="file" />
-                    <input type="email" id="email" name="email"
-                        value="email@example.com" />
-                    <input type="hidden" id="hidden" name="hidden"
-                        value="hidden" />
-                    <input type="month" id="month" name="month"
-                        value="2022-07" />
-                </section>
-
-                <section>
-                    <input type="number" id="number" name="number"
-                        value="12345" />
-
-                    <input type="password" id="password" name="password"
-                        value="password" />
-
-                    <input type="search" id="search" name="search"
-                        value="Search" />
-                </section>
-
-                <section>
-                    <input type="tel" id="tel" name="tel"
-                        value="+1 (415) 555-0132" />
-
-                    <input type="text" id="text" name="text" value="text" />
-
-                    <input type="time" id="time" name="time" value="12:00:00" />
-                </section>
-
-                <section>
-                    <input type="url" id="url" name="url"
-                        value="http://www.w3schools.com" />
-
-                    <input type="week" id="week" name="week" value="2022-W01" />
-                    <select>
-                        <optgroup label="Group 1">
-                            <option>Option 1.1</option>
-                        </optgroup>
-                        <optgroup label="Group 2">
-                            <option disabled>Option 2.1</option>
-                            <option selected>Option 2.2</option>
-                        </optgroup>
-                        <optgroup label="Group 3" disabled>
-                            <option>Option 3.1</option>
-                            <option>Option 3.2</option>
-                            <option label="Option 3.3">Option-3.3</option>
-                        </optgroup>
-                    </select>
-                </section>
-
                 <section>
                     <input type="image" id="image" name="image"
                         src="http://www.w3schools.com/html/img_girl.jpg"
                         alt="Girl" />
-
-                    <label for="pet-select">Choose a pet: <select name="pets"
-                            id="pet-select">
-                            <option value="">--Please choose an option--
-                            </option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Please choose one or more pets:
-                        <select name="pets" multiple size="4">
-                            <optgroup label="4-legged pets">
-                                <option value="dog">Dog</option>
-                                <option value="cat">Cat</option>
-                                <option value="hamster" disabled>Hamster
-                                </option>
-                            </optgroup>
-                            <optgroup label="Flying pets">
-                                <option value="parrot">Parrot</option>
-                                <option value="macaw">Macaw</option>
-                                <option value="albatross">Albatross</option>
-                            </optgroup>
-                        </select>
-                    </label>
                 </section>
 
                 <section>
@@ -2213,3 +2462,4 @@
 <!-- TODO: Implement hr -->
 <!-- TODO: Implement progress -->
 <!-- TODO: Fix horizontal slider -->
+<!-- TODO: Fix code scroll -->
