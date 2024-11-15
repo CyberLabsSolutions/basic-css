@@ -159,6 +159,7 @@ body[data-purpose="website"] main,
 body[data-purpose="website"] header > *,
 body[data-purpose="website"] footer > * {
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -303,7 +304,7 @@ abbr[title] {
 abbr[title]::before {
   content: attr(title);
   position: absolute;
-  bottom: 127%;
+  bottom: 2em;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-background);
@@ -314,9 +315,7 @@ abbr[title]::before {
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
   pointer-events: none;
-  z-index: 10;
 }
 
 abbr[title]::after {
@@ -330,8 +329,6 @@ abbr[title]::after {
   border-color: var(--color-yellow) transparent transparent transparent;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 10;
 }
 
 abbr[title]:hover::before,
@@ -356,7 +353,7 @@ time[datetime] {
 time[datetime]::before {
   content: attr(datetime);
   position: absolute;
-  bottom: 127%;
+  bottom: 2em;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-background);
@@ -367,9 +364,7 @@ time[datetime]::before {
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
   pointer-events: none;
-  z-index: 10;
 }
 
 time[datetime]::after {
@@ -383,8 +378,6 @@ time[datetime]::after {
   border-color: var(--color-yellow) transparent transparent transparent;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 10;
 }
 
 time[datetime]:hover::before,
@@ -406,7 +399,6 @@ code,
 kbd {
   color: var(--color-yellow);
   background-color: var(--color-gray);
-  padding: 0 var(--small-padding);
   border-radius: var(--small-border-radius);
 }
 
@@ -441,6 +433,10 @@ blockquote {
   border-radius: var(--large-border-radius);
   margin: 0;
   padding: var(--body-font-size);
+}
+
+blockquote cite, hgroup cite {
+  border-bottom: none;
 }
 
 hgroup {
@@ -673,8 +669,6 @@ section:has(> table) {
   width: 100%;
   overflow: auto;
   border-radius: var(--small-border-radius);
-  display: flex;
-  flex-direction: column;
   height: 70vh;
   max-height: 70vh;
 }
@@ -685,11 +679,12 @@ table {
   background-color: var(--color-background);
   font-weight: var(--text-font-weight);
 }
-caption {
+
+table caption {
   caption-side: top;
   text-align: center;
   font-weight: bold;
-  padding: 10px;
+  padding: 0.5em;
   font-family: var(--serif-font-family);
   position: sticky;
   top: 0;
@@ -701,7 +696,7 @@ caption {
 }
 
 tr {
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 0px solid var(--color-gray);
 }
 
 tbody tr:nth-child(2n) {
@@ -709,24 +704,27 @@ tbody tr:nth-child(2n) {
 }
 
 tbody tr {
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 0px solid var(--color-gray);
 }
 
 th,
 td {
   padding: 0.5em;
   text-align: left;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
   font-weight: var(--text-font-weight);
 }
 
 thead {
   position: sticky;
-  top: 0; /* Adjust this value based on the height of the caption */
   background-color: var(--color-gray);
   z-index: 3;
   width: 100%;
   border-bottom: 1px solid var(--color-gray);
+}
+
+table:has(caption) thead {
+  top: calc(var(--body-font-size)*var(--line-height) + 1em);
 }
 
 tfoot th,
@@ -828,7 +826,10 @@ iframe {
 
 audio {
   width: 100%;
-  height: auto;
+  height: 2em;
+  background-color: var(--color-gray);
+  border-radius: var(--large-border-radius);
+  overflow: hidden;
 }
 
 details {
@@ -1099,7 +1100,6 @@ button:focus {
 textarea {
   resize: vertical;
   width: 100%;
-  min-height: calc(var(--line-height) * 1em + 1em);
 }
 
 input:disabled,
