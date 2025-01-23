@@ -15,46 +15,16 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Segoe UI Emoji",
     "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  /* --body-font-size: clamp(
-    0.9rem,
-    calc(0.9rem + ((1vw - 0.48rem) * 0.2778)),
-    1.1rem
-  ); */
-  --body-font-size: 1rem;
+  --body-font-size: clamp(1rem, 1rem + (1vw - 0.533rem) * 0.3086, 1.222rem);
 
-  --heading-font-scale-factor: 1.333; /* Perfect fourth scale (recommended) */
+  --heading-font-scale-factor: 1.15;
 
-  --h1-font-size: calc(var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem);
-  --h2-font-size: calc(var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem);
-  --h3-font-size: calc(var(--heading-font-scale-factor) * 1rem);
-  --h4-font-size: calc(1rem);
-  --h5-font-size: calc(1rem / var(--heading-font-scale-factor));
-  --h6-font-size: calc(1rem / (var(--heading-font-scale-factor) * var(--heading-font-scale-factor)));
-
-  /* --heading-font-scale-factor: 1.15;
-
-  --h1-font-size: calc(
-    var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
-      var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
-      var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem
-  );
-  --h2-font-size: calc(
-    var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
-      var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
-      var(--heading-font-scale-factor) * 1rem
-  );
-  --h3-font-size: calc(
-    var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
-      var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem
-  );
-  --h4-font-size: calc(
-    var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
-      var(--heading-font-scale-factor) * 1rem
-  );
-  --h5-font-size: calc(
-    var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem
-  );
-  --h6-font-size: calc(var(--heading-font-scale-factor) * 1rem); */
+  --h1-font-size: calc(pow(var(--heading-font-scale-factor), 6) * 1rem);
+  --h2-font-size: calc(pow(var(--heading-font-scale-factor), 5) * 1rem);
+  --h3-font-size: calc(pow(var(--heading-font-scale-factor), 4) * 1rem);
+  --h4-font-size: calc(pow(var(--heading-font-scale-factor), 3) * 1rem);
+  --h5-font-size: calc(pow(var(--heading-font-scale-factor), 2) * 1rem);
+  --h6-font-size: calc(var(--heading-font-scale-factor) * 1rem);
 
   --heading-margin-top: 0.67em;
   --heading-margin-bottom: 0.33em;
@@ -84,29 +54,63 @@
   --large-padding: 0.4em;
   --small-padding: 0.2em;
 
-  --color-background: var(--color-light);
-  --color-text: var(--color-dark);
+  -contrast-threshold: 60%;
+  --color-text: hsl(0, 0%, calc(var(--contrast-threshold) - (var(--is-light) * 100%)));
+  --color-background: hsl(0, 0%, calc(var(--is-light) * 100%));
+  /* --color-background: var(--color-light);
+  --color-text: var(--color-dark); */
 
   --transition-duration: 0.3s;
+
+  font-synthesis: none;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
-input,
-textarea,
-select,
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  height: 100dvh;
+}
+
+dialog::backdrop {
+  height: 100dvh;
+}
+
 button {
-  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
 }
 
-code {
-  font-size: 0.9em;
+button:active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center,
+    rgba(255,255,255,0.25) 0%,
+    transparent 80%);
+  animation: ripple 400ms ease-out;
 }
 
-dialog {
-  font-size: 1rem;
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
-figcaption {
-  font-size: 0.875rem;
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray);
+  border-radius: var(--large-border-radius);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
 }
 
 /* Apply border-color transition to buttons and inputs */
@@ -230,7 +234,7 @@ article {
   overflow-y: auto;
 }
 
-@media (max-width: 37.5em) { /* 600px ÷ 16px = 37.5em */
+@media (max-width: 37.5rem) {
   main {
     flex-direction: column;
   }
@@ -433,6 +437,7 @@ kbd {
   color: var(--color-yellow);
   background-color: var(--color-gray);
   border-radius: var(--small-border-radius);
+  font-size: 0.875em;
 }
 
 kbd {
@@ -444,7 +449,6 @@ q {
 }
 
 pre {
-  font-size: 0.875rem;
   background-color: var(--color-gray);
   padding: var(--body-font-size);
   border-radius: var(--small-border-radius);
@@ -815,7 +819,7 @@ section > * {
   flex: 1;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 37.5rem) {
   section > * {
     align-self: flex-end;
   }
@@ -834,7 +838,7 @@ section > div:last-child {
   padding-right: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   section {
     flex-direction: column;
   }
@@ -1171,7 +1175,7 @@ form section > * {
   margin-bottom: 0.5em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   form section {
     flex-direction: column;
     align-items: flex-start;
@@ -1427,7 +1431,7 @@ input[type="button"] {
   min-width: 9em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   button {
     width: 100%;
   }
@@ -1597,7 +1601,7 @@ button:has(q) q::after {
   content: "";
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   dialog input,
   dialog textarea,
   dialog select,
