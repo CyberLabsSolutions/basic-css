@@ -15,13 +15,23 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Segoe UI Emoji",
     "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  --body-font-size: clamp(
+  /* --body-font-size: clamp(
     0.9rem,
     calc(0.9rem + ((1vw - 0.48rem) * 0.2778)),
     1.1rem
-  );
+  ); */
+  --body-font-size: 1rem;
 
-  --heading-font-scale-factor: 1.15;
+  --heading-font-scale-factor: 1.333; /* Perfect fourth scale (recommended) */
+
+  --h1-font-size: calc(var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem);
+  --h2-font-size: calc(var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem);
+  --h3-font-size: calc(var(--heading-font-scale-factor) * 1rem);
+  --h4-font-size: calc(1rem);
+  --h5-font-size: calc(1rem / var(--heading-font-scale-factor));
+  --h6-font-size: calc(1rem / (var(--heading-font-scale-factor) * var(--heading-font-scale-factor)));
+
+  /* --heading-font-scale-factor: 1.15;
 
   --h1-font-size: calc(
     var(--heading-font-scale-factor) * var(--heading-font-scale-factor) *
@@ -44,7 +54,7 @@
   --h5-font-size: calc(
     var(--heading-font-scale-factor) * var(--heading-font-scale-factor) * 1rem
   );
-  --h6-font-size: calc(var(--heading-font-scale-factor) * 1rem);
+  --h6-font-size: calc(var(--heading-font-scale-factor) * 1rem); */
 
   --heading-margin-top: 0.67em;
   --heading-margin-bottom: 0.33em;
@@ -78,6 +88,25 @@
   --color-text: var(--color-dark);
 
   --transition-duration: 0.3s;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 1rem;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+dialog {
+  font-size: 1rem;
+}
+
+figcaption {
+  font-size: 0.875rem;
 }
 
 /* Apply border-color transition to buttons and inputs */
@@ -201,7 +230,7 @@ article {
   overflow-y: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) { /* 600px ÷ 16px = 37.5em */
   main {
     flex-direction: column;
   }
@@ -415,6 +444,7 @@ q {
 }
 
 pre {
+  font-size: 0.875rem;
   background-color: var(--color-gray);
   padding: var(--body-font-size);
   border-radius: var(--small-border-radius);
