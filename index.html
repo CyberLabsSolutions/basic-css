@@ -1325,12 +1325,24 @@
 &lt;/form&gt;</code></pre>
 
             <h3 id="textarea">Textarea</h3>
+            <p>Textareas are used for multi-line text input.</p>
+            <p>The <code>rows</code> attribute specifies the number of visible
+                text lines for the control.</p>
             <form>
-                <textarea name="textarea"
+                <textarea name="textarea" rows="1"
                     placeholder="Write something here…"></textarea>
             </form>
             <pre><code>&lt;form&gt;
     &lt;textarea name="textarea" placeholder="Write something here…"&gt;&lt;/textarea&gt;
+&lt;/form&gt;</code></pre>
+            <p>If the <code>rows</code> attribute is not specified, the
+                textarea automatically grows and shrinks to fit the content.</p>
+            <form>
+                <textarea name="textarea2"
+                    placeholder="Write something here…"></textarea>
+            </form>
+            <pre><code>&lt;form&gt;
+    &lt;textarea name="textarea2" placeholder="Write something here…"&gt;&lt;/textarea&gt;
 &lt;/form&gt;</code></pre>
 
             <h3 id="image-input">Image input</h3>
@@ -1698,6 +1710,17 @@
     <footer>
         <div>This is a footer. Это футер. Սա ստորագիր է։</div>
     </footer>
+
+    <script>
+        document.querySelectorAll('textarea:not([rows])').forEach(textarea => {
+            function autoResize() {
+                textarea.style.height = 'auto';
+                textarea.style.height = textarea.scrollHeight + 'px';
+            }
+            textarea.addEventListener('input', autoResize);
+            autoResize();
+        });
+    </script>
 </body>
 
 </html>
