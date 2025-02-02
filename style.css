@@ -1060,26 +1060,68 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime-local"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="color"]:focus,
-input[type="file"]:focus,
-input[type="image"]:focus,
-textarea:focus,
-select:focus,
-button:focus {
+/* Apply if not readonly on focus and on active */
+input[type="text"]:not([readonly]):focus,
+input[type="text"]:not([readonly]):active,
+input[type="password"]:not([readonly]):focus,
+input[type="password"]:not([readonly]):active,
+input[type="email"]:not([readonly]):focus,
+input[type="email"]:not([readonly]):active,
+input[type="tel"]:not([readonly]):focus,
+input[type="tel"]:not([readonly]):active,
+input[type="url"]:not([readonly]):focus,
+input[type="url"]:not([readonly]):active,
+input[type="date"]:not([readonly]):focus,
+input[type="date"]:not([readonly]):active,
+input[type="month"]:not([readonly]):focus,
+input[type="month"]:not([readonly]):active,
+input[type="week"]:not([readonly]):focus,
+input[type="week"]:not([readonly]):active,
+input[type="time"]:not([readonly]):focus,
+input[type="time"]:not([readonly]):active,
+input[type="datetime-local"]:not([readonly]):focus,
+input[type="datetime-local"]:not([readonly]):active,
+input[type="number"]:not([readonly]):focus,
+input[type="number"]:not([readonly]):active,
+input[type="search"]:not([readonly]):focus,
+input[type="search"]:not([readonly]):active,
+input[type="color"]:not([readonly]):focus,
+input[type="color"]:not([readonly]):active,
+input[type="file"]:not([readonly]):focus,
+input[type="file"]:not([readonly]):active,
+input[type="image"]:not([readonly]):focus,
+input[type="image"]:not([readonly]):active,
+textarea:not([readonly]):focus,
+textarea:not([readonly]):active,
+select:not([readonly]):focus,
+select:not([readonly]):active,
+button:not([readonly]):focus,
+button:not([readonly]):active {
   border: 1px solid var(--color-blue);
   border-bottom: 2px solid var(--color-blue);
+}
+
+/* Apply if readonly */
+input[type="text"][readonly],
+input[type="password"][readonly],
+input[type="email"][readonly],
+input[type="tel"][readonly],
+input[type="url"][readonly],
+input[type="date"][readonly],
+input[type="month"][readonly],
+input[type="week"][readonly],
+input[type="time"][readonly],
+input[type="datetime-local"][readonly],
+input[type="number"][readonly],
+input[type="search"][readonly],
+input[type="color"][readonly],
+input[type="file"][readonly],
+input[type="image"][readonly],
+textarea[readonly],
+select[readonly],
+button[readonly] {
+  border: 1px solid var(--color-gray-opacity);
+  border-bottom: 2px solid var(--color-text);
 }
 
 input[type="file"] {
