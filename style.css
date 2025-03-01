@@ -88,7 +88,7 @@ button {
   transform: translateZ(0);
 }
 
-button:active::after {
+button:not([disabled]):active::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1094,9 +1094,7 @@ input[type="image"]:not([readonly]):active,
 textarea:not([readonly]):focus,
 textarea:not([readonly]):active,
 select:not([readonly]):focus,
-select:not([readonly]):active,
-button:not([readonly]):focus,
-button:not([readonly]):active {
+select:not([readonly]):active {
   border: 1px solid var(--color-blue);
   border-bottom: 2px solid var(--color-blue);
 }
@@ -1118,8 +1116,7 @@ input[type="color"][readonly],
 input[type="file"][readonly],
 input[type="image"][readonly],
 textarea[readonly],
-select[readonly],
-button[readonly] {
+select[readonly] {
   border: 1px solid var(--color-gray-opacity);
   border-bottom: 2px solid var(--color-text);
 }
@@ -1458,6 +1455,13 @@ input[type="button"] {
   min-width: 9em;
 }
 
+header button,
+header input[type="submit"],
+header input[type="reset"],
+header input[type="button"] {
+  min-width: 0;
+}
+
 @media screen and (max-width: 37.5rem) {
   button {
     width: 100%;
@@ -1542,8 +1546,7 @@ button:focus {
 }
 
 button[type="button"] {
-  background-color: var(--color-text);
-  color: var(--color-background);
+  background-color: var(--color-background);
 }
 
 button[type="button"]:hover,
